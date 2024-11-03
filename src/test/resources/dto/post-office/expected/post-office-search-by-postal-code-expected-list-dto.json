@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "postOfficeName": "Moscow",
+    "address": {
+      "id": 1,
+      "country": "Russia",
+      "town": "Moscow",
+      "street": "Tverskaya",
+      "postalCode": "101000"
+    }
+  },
+  {
+    "id": 2,
+    "postOfficeName": "Saint Petersburg",
+    "address": {
+      "id": 2,
+      "country": "Russia",
+      "town": "Saint Petersburg",
+      "street": "Nevsky Prospect",
+      "postalCode": "190000"
+    }
+  }
+]

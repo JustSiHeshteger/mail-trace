@@ -1,0 +1,51 @@
+{
+  "identifier": "ea901f00-ecfe-4bfc-9b35-b9e0356d3e21",
+  "postageType": "PACKAGE",
+  "status": "AWAITING_PICK_UP",
+  "person": {
+    "id": 1,
+    "firstName": "Ivan",
+    "secondName": "Ivanov",
+    "thirdName": "Ivanovich",
+    "phoneNumber": "79991112233",
+    "address": {
+      "id": 3,
+      "country": "Russia",
+      "town": "Novosibirsk",
+      "street": "Lenina Street",
+      "postalCode": "630000"
+    }
+  },
+  "trackingList": [
+    {
+      "id": 1,
+      "timestamp": "2024-10-24T20:28:02",
+      "postOffice": {
+        "id": 1,
+        "postOfficeName": "Moscow",
+        "address": {
+          "id": 1,
+          "country": "Russia",
+          "town": "Moscow",
+          "street": "Tverskaya",
+          "postalCode": "101000"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-10-24T20:28:07",
+      "postOffice": {
+        "id": 2,
+        "postOfficeName": "Saint Petersburg",
+        "address": {
+          "id": 2,
+          "country": "Russia",
+          "town": "Saint Petersburg",
+          "street": "Nevsky Prospect",
+          "postalCode": "190000"
+        }
+      }
+    }
+  ]
+}

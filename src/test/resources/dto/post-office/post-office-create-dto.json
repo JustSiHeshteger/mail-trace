@@ -1,0 +1,9 @@
+{
+  "postOfficeName": "Central Post Office",
+  "address": {
+    "country": "Russia",
+    "town": "Saint-Petersburg",
+    "street": "Truda",
+    "postalCode": "196655"
+  }
+}

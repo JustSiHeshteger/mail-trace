@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2024-10-20T20:06:27",
+    "postOffice": {
+      "id": 1,
+      "postOfficeName": "Moscow",
+      "address": {
+        "id": 1,
+        "country": "Russia",
+        "town": "Moscow",
+        "street": "Tverskaya",
+        "postalCode": "101000"
+      }
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "postageType": "PACKAGE",
+  "status": "IN_TRANSIT",
+  "person": {
+    "firstName": "Ivan",
+    "secondName": "Ivanov",
+    "thirdName": "Ivanovich",
+    "phoneNumber": "+12345678901",
+    "address": {
+      "country": "Russia",
+      "town": "Moscow",
+      "street": "Lenin Avenue",
+      "postalCode": "101000"
+    }
+  }
+}

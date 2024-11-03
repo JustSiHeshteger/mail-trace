@@ -1,0 +1,16 @@
+{
+  "validateErrorList": [
+    {
+      "field": "postageType",
+      "message": "must not be null"
+    },
+    {
+      "field": "person.firstName",
+      "message": "must not be blank"
+    },
+    {
+      "field": "person.firstName",
+      "message": "must not be null"
+    }
+  ]
+}

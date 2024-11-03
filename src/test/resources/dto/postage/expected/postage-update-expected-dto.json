@@ -1,0 +1,36 @@
+{
+  "identifier": "ea901f00-ecfe-4bfc-9b35-b9e0356d3e21",
+  "postageType": "PACKAGE",
+  "status": "IN_TRANSIT",
+  "person": {
+    "id": 1,
+    "firstName": "Andrey",
+    "secondName": "Ivanov",
+    "thirdName": "Ivanovich",
+    "phoneNumber": "79214121279",
+    "address": {
+      "id": 3,
+      "country": "Russia",
+      "town": "Novosibirsk",
+      "street": "Lenina Street",
+      "postalCode": "630000"
+    }
+  },
+  "trackingList": [
+    {
+      "id": 1,
+      "timestamp": "2024-10-18T16:07:26",
+      "postOffice": {
+        "id": 1,
+        "postOfficeName": "Moscow",
+        "address": {
+          "id": 1,
+          "country": "Russia",
+          "town": "Moscow",
+          "street": "Tverskaya",
+          "postalCode": "101000"
+        }
+      }
+    }
+  ]
+}

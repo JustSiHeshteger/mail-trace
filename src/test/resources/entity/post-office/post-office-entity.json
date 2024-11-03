@@ -1,0 +1,10 @@
+{
+  "id": 3,
+  "postOfficeName": "Central Post Office",
+  "address": {
+    "country": "Russia",
+    "town": "Moscow",
+    "street": "Tverskaya Street, 7",
+    "postalCode": "101000"
+  }
+}

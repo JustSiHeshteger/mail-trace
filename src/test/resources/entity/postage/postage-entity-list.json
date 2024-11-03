@@ -1,0 +1,86 @@
+[
+  {
+    "postageType": "PACKAGE",
+    "status": "IN_TRANSIT",
+    "person": {
+      "firstName": "John",
+      "secondName": "Doe",
+      "thirdName": "Asd",
+      "phoneNumber": "+1234567890",
+      "address": {
+        "country": "Russia",
+        "town": "Moscow",
+        "street": "Truda",
+        "postalCode": "101000"
+      }
+    },
+    "trackingList": [
+      {
+        "timestamp": "2024-09-18T10:00:00",
+        "postOffice": {
+          "postOfficeName": "Central Post Office",
+          "address": {
+            "country": "Russia",
+            "town": "Moscow",
+            "street": "Lenin Avenue",
+            "postalCode": "101000"
+          }
+        }
+      },
+      {
+        "timestamp": "2024-09-19T14:30:00",
+        "postOffice": {
+          "postOfficeName": "West Side Post Office",
+          "address": {
+            "country": "Russia",
+            "town": "Saint-Petersburg",
+            "street": "Pushkin",
+            "postalCode": "123456"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "postageType": "LETTER",
+    "status": "DELIVERED",
+    "person": {
+      "firstName": "Jane",
+      "secondName": "Smith",
+      "thirdName": "Smith",
+      "phoneNumber": "+9876543210",
+      "address": {
+        "country": "Russia",
+        "town": "Moscow",
+        "street": "Truda",
+        "postalCode": "101000"
+      }
+    },
+    "trackingList": [
+      {
+        "timestamp": "2024-09-15T08:45:00",
+        "postOffice": {
+          "postOfficeName": "East Post Office",
+          "address": {
+            "country": "Russia",
+            "town": "Vladivostok",
+            "street": "Red Square",
+            "postalCode": "512143"
+          }
+        }
+      },
+      {
+        "timestamp": "2024-09-16T12:00:00",
+        "postOffice": {
+          "postOfficeName": "Central Post Office",
+          "address": {
+            "country": "Russia",
+            "town": "Moscow",
+            "street": "Lenin",
+            "postalCode": "125621"
+          }
+        }
+      }
+    ]
+  }
+]

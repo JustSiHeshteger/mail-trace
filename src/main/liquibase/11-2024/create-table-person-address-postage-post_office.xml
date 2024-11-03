@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <!-- Таблица почтовых отправлений -->
+    <changeSet id="1" author="Strigalev Andrey">
+        <preConditions onFail="MARK_RAN" onError="HALT">
+            <not>
+                <tableExists tableName="postage"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="postage">
+            <column name="postage_id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="postage_type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <!-- Поля для связи -->
+            <column name="person_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    <!-- Таблица получателей -->
+    <changeSet id="2" author="Strigalev Andrey">
+        <preConditions onFail="MARK_RAN" onError="HALT">
+            <not>
+                <tableExists tableName="person"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="person">
+            <column name="person_id" type="BIGSERIAL" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="first_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="second_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="third_name" type="VARCHAR(50)"/>
+            <column name="phone_number" type="VARCHAR(12)">
+                <constraints nullable="false"/>
+            </column>
+
+            <!-- Поля для связи -->
+            <column name="address_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    <!-- Таблица почтовых отделений -->
+    <changeSet id="3" author="Strigalev Andrey">
+        <preConditions onFail="MARK_RAN" onError="HALT">
+            <not>
+                <tableExists tableName="post_office"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="post_office">
+            <column name="post_office_id" type="BIGSERIAL" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="post_office_name" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+
+            <!-- Поля для связи -->
+            <column name="address_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    <!-- Таблица адресов -->
+    <changeSet id="4" author="Strigalev Andrey">
+        <preConditions onFail="MARK_RAN" onError="HALT">
+            <not>
+                <tableExists tableName="address"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="address">
+            <column name="address_id" type="BIGSERIAL" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="country" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="town" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="street" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postal_code" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    <!-- Связи таблиц -->
+    <changeSet id="5" author="Strigalev Andrey">
+        <preConditions onFail="MARK_RAN" onError="HALT">
+            <not>
+                <foreignKeyConstraintExists foreignKeyName="fk_person_postage"/>
+                <foreignKeyConstraintExists foreignKeyName="fk_address_post_office"/>
+                <foreignKeyConstraintExists foreignKeyName="fk_address_person"/>
+            </not>
+        </preConditions>
+
+        <addForeignKeyConstraint baseTableName="postage"
+                                 baseColumnNames="person_id"
+                                 constraintName="fk_postage_person"
+                                 referencedTableName="person"
+                                 referencedColumnNames="person_id"/>
+
+        <addForeignKeyConstraint baseTableName="person"
+                                 baseColumnNames="address_id"
+                                 constraintName="fk_person_address"
+                                 referencedTableName="address"
+                                 referencedColumnNames="address_id"/>
+
+        <addForeignKeyConstraint baseTableName="post_office"
+                                 baseColumnNames="address_id"
+                                 constraintName="fk_post_office_address"
+                                 referencedTableName="address"
+                                 referencedColumnNames="address_id"/>
+    </changeSet>
+
+
+    <!-- Уникалльные ограничения таблиц -->
+    <changeSet id="6" author="Strigalev Andrey">
+        <addUniqueConstraint tableName="post_office"
+                             columnNames="post_office_name, address_id"
+                             constraintName="uc_post_office_address"/>
+    </changeSet>
+
+</databaseChangeLog>

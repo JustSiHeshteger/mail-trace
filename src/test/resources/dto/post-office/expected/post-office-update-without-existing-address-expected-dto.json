@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "postOfficeName": "Central Post Office",
+  "address": {
+    "id": 5,
+    "country": "Russia",
+    "town": "Kolpino",
+    "street": "Tverskaya",
+    "postalCode": "196655"
+  }
+}

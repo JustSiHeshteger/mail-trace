@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: mail-trace
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mail_trace_db
+    username: user
+    password: password
+
+  liquibase:
+    change-log: main-changelog.xml
+    enabled: true
+
+  jpa:
+    show-sql: true
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none

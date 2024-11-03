@@ -1,0 +1,8 @@
+{
+  "validateErrorList": [
+    {
+      "field": "postageType",
+      "message": "must not be null"
+    }
+  ]
+}

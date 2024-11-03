@@ -1,0 +1,31 @@
+{
+  "identifier": "8cc75f90-21ce-49b3-a6b2-e98bad02d7b8",
+  "postageType": "PACKAGE",
+  "status": "IN_TRANSIT",
+  "person": {
+    "firstName": "Ivan",
+    "secondName": "Ivanov",
+    "thirdName": "Ivanovich",
+    "phoneNumber": "+12345678901",
+    "address": {
+      "country": "Russia",
+      "town": "Moscow",
+      "street": "Lenin Avenue",
+      "postalCode": "101000"
+    }
+  },
+  "trackingList": [
+    {
+      "timestamp": "2024-10-20T20:29:51",
+      "postOffice": {
+        "postOfficeName": "Moscow",
+        "address": {
+          "country": "Russia",
+          "town": "Moscow",
+          "street": "Tverskaya",
+          "postalCode": "101000"
+        }
+      }
+    }
+  ]
+}
